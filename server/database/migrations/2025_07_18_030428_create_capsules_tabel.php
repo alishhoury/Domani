@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 use App\Models\User;
+use App\Models\Capsule;
 
 return new class extends Migration
 {
@@ -57,6 +58,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('capsules_tabel');
+    Schema::dropIfExists('capsule_locations');
+    Schema::dropIfExists('capsules_tags');
+    Schema::dropIfExists('capsules_media');
+    Schema::dropIfExists('capsules');
     }
 };
