@@ -22,7 +22,7 @@ class CapsuleFactory extends Factory
             'media_type' =>$this->faker->randomElement(['message', 'image', 'video']),
             'file_path' =>$this->faker->filePath(),
             'file_name' =>$this->faker->word(),
-            'mood' =>$this->faker-randomElement(['happy', 'sad', 'excited', 'nervous']),
+            'mood' =>$this->faker->randomElement(['happy', 'sad', 'excited', 'nervous']),
             'private_mode' =>$this->faker->boolean(),
             'surprize_mode' =>$this->faker->boolean(),
             'location_mode' => 1,

@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
-use App\Models\User;
 use App\Models\Capsule;
+
 
 return new class extends Migration
 {
@@ -14,14 +13,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('capsules', function (Blueprint $table) {
+        Schema::create('capsule_media', function (Blueprint $table){
             $table->id();
-            $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
-            $table->date('reveal_at');
-            $table->boolean('is_revealed')->default(false);
+            $table->foreignIdFor(Capsule::class)->constrained()->onDelete('cascade');
+            $table->string('media_type');
+            $table->text('file_path');
+            $table->string('file_name');
+            $table->string('mood');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-    Schema::dropIfExists('capsules');
+        Schema::dropIfExists('capsule_media');
     }
 };

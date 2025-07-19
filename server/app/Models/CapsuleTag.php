@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Capsule extends Model
+class CapsuleTag extends Model
 {
     use HasFactory;
 }
