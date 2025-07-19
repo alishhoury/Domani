@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Capsule;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CapsuleLocation>
@@ -17,6 +19,7 @@ class CapsuleLocationFactory extends Factory
     public function definition(): array
     {
         return [
+            'capsule_id' => Capsule::factory(),
             'ip_address' =>$this->faker->numerify('##.##.###.###'),
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude(),        ];

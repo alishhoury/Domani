@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Capsule;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CapsuleMedia>
@@ -17,6 +18,7 @@ class CapsuleMediaFactory extends Factory
     public function definition(): array
     {
         return [
+            'capsule_id' => Capsule::factory(),
             'media_type' =>$this->faker->randomElement(['message', 'image', 'video']),
             'file_path' =>$this->faker->filePath(),
             'file_name' =>$this->faker->word(),

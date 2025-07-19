@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Capsule::factory(10)->create();
         CapsuleMedia::factory(10)->create();
         CapsuleLocation::factory(10)->create();
-        CapsuleTage::factory(10)->create();
+        CapsuleTag::factory(10)->create();
 
 
         // User::factory()->create([
