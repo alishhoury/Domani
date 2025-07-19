@@ -19,10 +19,6 @@ class CapsuleFactory extends Factory
         return [
             'reveal_at' =>$this->faker->date(),
             'is_revealed' => 0,
-
-
-
-
         ];
     }
 }
