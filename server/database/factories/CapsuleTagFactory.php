@@ -17,7 +17,10 @@ class CapsuleTagFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'private_mode' =>$this->faker->boolean(),
+            'surprize_mode' =>$this->faker->boolean(),
+            'location_mode' => 1,
+
         ];
     }
 }
