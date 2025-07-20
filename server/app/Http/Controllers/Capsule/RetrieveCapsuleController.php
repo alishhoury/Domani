@@ -9,20 +9,23 @@ use App\Models\Capsule;
 class RetrieveCapsuleController extends Controller
 {
     function getUserCapsules(){
-        $Capsules = capsule::with(['media', 'tag', 'location']) ->get();
+        
+    }
+    
+    function getPrivateCapsules(){
+        
+    }
+    
+    function getPublicCapsules(){
+        
+        $Capsules = Capsule::with(['media', 'tag', 'location'])->where('is_revealed', 0)->whereHas('tag', function ($query) {
+        $query->where('private_mode', 0); })
+        ->orderBy('reveal_at', 'desc')->take(20)->get();        
+
         $response = [];
         $response["status"] = "success";
         $response["payload"] = $Capsules;
         return json_encode($response);
-
-    }
-
-    function getPrivateCapsules(){
-        
-    }
-
-    function getPublicCapsules(){
-
     }
 
     function getPublicByCountry(){
