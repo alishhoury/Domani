@@ -9,6 +9,7 @@ class AuthController extends Controller{
     
     function login(){
 
+
     }
 
     function register(){

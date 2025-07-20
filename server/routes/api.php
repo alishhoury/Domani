@@ -3,12 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use app\Http\Controllers\User\AuthController;
-use app\Http\Controllers\User\ProfileController;
-use app\Http\Controllers\Capsule\CreateCapsuleController;
-use app\Http\Controllers\Capsule\RetrieveCapsuleController;
+use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\Capsule\CreateCapsuleController;
 
-
+use App\Http\Controllers\Capsule\RetrieveCapsuleController;
 
 
 //Private Apis (need to be logged in)
