@@ -14,4 +14,8 @@ class AuthController extends Controller{
     function register(){
 
     }
+
+    function logout(){
+        
+    }
 }
