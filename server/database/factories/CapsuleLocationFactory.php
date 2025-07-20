@@ -19,9 +19,9 @@ class CapsuleLocationFactory extends Factory
     public function definition(): array
     {
         return [
-            'capsule_id' => Capsule::factory(),
             'ip_address' =>$this->faker->numerify('##.##.###.###'),
             'latitude' => $this->faker->latitude(),
-            'longitude' => $this->faker->longitude(),        ];
+            'longitude' => $this->faker->longitude(),        
+        ];
     }
 }

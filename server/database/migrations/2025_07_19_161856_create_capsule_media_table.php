@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('file_path');
             $table->string('file_name');
             $table->string('mood');
-            $table->timestamps();
         });
     }
 

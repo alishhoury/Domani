@@ -18,7 +18,6 @@ class CapsuleMediaFactory extends Factory
     public function definition(): array
     {
         return [
-            'capsule_id' => Capsule::factory(),
             'media_type' =>$this->faker->randomElement(['message', 'image', 'video']),
             'file_path' =>$this->faker->filePath(),
             'file_name' =>$this->faker->word(),

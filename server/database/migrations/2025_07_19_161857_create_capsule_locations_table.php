@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('ip_address')->nullable();
             $table->decimal('latitude', 10, 7)->nullable(); #10, 7 means 10 decimals with 7 after the point
             $table->decimal('longitude', 10, 7)->nullable();
-            $table->timestamps();
 
         });
     }

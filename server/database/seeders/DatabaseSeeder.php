@@ -17,16 +17,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
-        Capsule::factory(10)->create();
-        CapsuleMedia::factory(10)->create();
-        CapsuleLocation::factory(10)->create();
-        CapsuleTag::factory(10)->create();
+{
+    // Create 10 users
+    User::factory(10)->create()->each(function ($user) {
+        // For each user, create 10 capsules
+        Capsule::factory(10)->create(['user_id' => $user->id])->each(function ($capsule) {
+            // For each capsule, create 1 media, 1 location, and 1 tag
+            CapsuleMedia::factory()->create([
+                'capsule_id' => $capsule->id,
+            ]);
+
+            CapsuleLocation::factory()->create([
+                'capsule_id' => $capsule->id,
+            ]);
+
+            CapsuleTag::factory()->create([
+                'capsule_id' => $capsule->id,
+            ]);
+        });
+    });
 
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
+}
 }

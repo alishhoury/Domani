@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class CapsuleLocation extends Model
 {
+    public $timestamps = false;
     use HasFactory;
+    
+    public function capsule()
+    {
+        return $this->belongsTo(Capsule::class, 'capsule_id');
+    }    
 }

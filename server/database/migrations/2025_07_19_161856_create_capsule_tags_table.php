@@ -18,7 +18,6 @@ return new class extends Migration
             $table->boolean('private_mode')->default(false);
             $table->boolean('surprize_mode')->default(false);
             $table->boolean('location_mode')->default(false);
-            $table->timestamps();
         });
     }
 

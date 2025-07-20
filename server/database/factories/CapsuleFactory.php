@@ -19,7 +19,7 @@ class CapsuleFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(),
+
             'reveal_at' =>$this->faker->date(),
             'is_revealed' => 0,
         ];
