@@ -11,7 +11,7 @@ class RetrieveCapsuleService
  
     static function getPublicCapsules(){
 
-        return $Capsules = Capsule::where('is_revealed', 0)->where('private_mode', 0)
+        return $Capsules = Capsule::where('is_revealed', 1)->where('private_mode', 0)
         ->orderBy('reveal_at', 'desc')->take(20)->get();    
  
     }
