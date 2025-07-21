@@ -18,13 +18,10 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create()->each(function ($user) {
             Capsule::factory(10)->create([
                 'user_id' => $user->id,
-            ])->each(function ($capsule) {
-                CapsuleLocation::factory()->create([
-                    'capsule_id' => $capsule->id,
-                ]);
-            });
+            ]);
         });
-
     }
 }
+    
+
 

@@ -21,7 +21,8 @@ class CapsuleFactory extends Factory
         return [
             'private_mode' =>$this->faker->boolean(),
             'surprize_mode' =>$this->faker->boolean(),
-            'location_mode' =>$this->faker->boolean(),
+            'ip_address' =>$this->faker->numerify('##.##.###.###'),
+            'countryName' => $this->faker->country(),
             'mood' => fake()->randomElement(['happy', 'sad', 'nervous', 'excited']),
             'message' => fake()->paragraph(),
             'media_type' => fake()->randomElement(['image', 'video', 'audio']),

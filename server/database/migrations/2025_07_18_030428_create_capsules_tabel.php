@@ -20,7 +20,9 @@ return new class extends Migration
             //tags
             $table->boolean('private_mode')->default(false);
             $table->boolean('surprize_mode')->default(false);
-            $table->boolean('location_mode')->default(false);
+            //location
+            $table->string('ip_address')->nullable();
+            $table->string('countryName')->nullable();
             //media
             $table->enum('mood', ['happy', 'sad', 'nervous', 'excited']);
             $table->text('message');

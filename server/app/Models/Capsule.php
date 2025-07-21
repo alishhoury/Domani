@@ -10,13 +10,11 @@ class Capsule extends Model
 {
     use HasFactory;
 
-        public function user()
-    {
+        public function user(){
+
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function location()
-    {
-        return $this->hasOne(CapsuleLocation::class, 'capsule_id');
-    }
 }
+
+
