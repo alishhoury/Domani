@@ -27,7 +27,7 @@ class CapsuleFactory extends Factory
             'message' => fake()->paragraph(),
             'media_type' => fake()->randomElement(['image', 'video', 'audio']),
             'media_path' => fake()->url(),
-            'reveal_at' =>$this->faker->date(),
+            'reveal_at' =>$this->faker->dateTimeBetween($startDate = '-2 year', $endDate = '+1 year'),
             'is_revealed' => 0,
         ];
     }
