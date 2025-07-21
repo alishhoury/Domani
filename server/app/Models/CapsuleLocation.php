@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+
 class CapsuleLocation extends Model
 {
-    public $timestamps = false;
     use HasFactory;
-    
+    public $timestamps = false;
+
+
     public function capsule()
     {
         return $this->belongsTo(Capsule::class, 'capsule_id');
-    }    
+    } 
 }

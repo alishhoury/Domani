@@ -19,7 +19,13 @@ class CapsuleFactory extends Factory
     public function definition(): array
     {
         return [
-
+            'private_mode' =>$this->faker->boolean(),
+            'surprize_mode' =>$this->faker->boolean(),
+            'location_mode' =>$this->faker->boolean(),
+            'mood' => fake()->randomElement(['happy', 'sad', 'nervous', 'excited']),
+            'message' => fake()->paragraph(),
+            'media_type' => fake()->randomElement(['image', 'video', 'audio']),
+            'media_path' => fake()->url(),
             'reveal_at' =>$this->faker->date(),
             'is_revealed' => 0,
         ];

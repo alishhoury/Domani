@@ -18,8 +18,9 @@ class RetrieveCapsuleController extends Controller
     }
     
     function getPublicCapsules(){
-        
+
         $Capsules = RetrieveCapsuleService::getPublicCapsules();
+        
         return $this->responseJSON($Capsules);
 
     }

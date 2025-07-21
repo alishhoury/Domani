@@ -4,13 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
+// use App\Models\CapsuleLocation;
+// use App\Models\CapsuleMedia;
+// use App\Models\CapsuleTag;
+// use App\Models\User;
 
 class Capsule extends Model
 {
     use HasFactory;
 
-        public function user()
+//relations to other models
+    public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
@@ -19,4 +23,5 @@ class Capsule extends Model
     {
         return $this->hasOne(CapsuleLocation::class, 'capsule_id');
     }
+
 }

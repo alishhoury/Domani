@@ -21,7 +21,8 @@ class CapsuleLocationFactory extends Factory
         return [
             'ip_address' =>$this->faker->numerify('##.##.###.###'),
             'latitude' => $this->faker->latitude(),
-            'longitude' => $this->faker->longitude(),        
+            'longitude' => $this->faker->longitude(),     
+            'countryName' => $this->faker->country()
         ];
     }
 }
