@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('capsule_tags', function (Blueprint $table) {
-            $table->index(['private_mode'], 'index_private_mode');
+            $table->index(['capsule_id', 'id'], 'index_capsule_tag_id');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('capsule_tags', function (Blueprint $table) {
-            $table-dropIndex('index_private_mode');
+            $table->dropIndex('index_capsule_tag_id');
         });
     }
 };
