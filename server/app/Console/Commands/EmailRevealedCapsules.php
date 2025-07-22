@@ -3,6 +3,9 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Models\Capsule;
+use Illuminate\Support\Facades\Mail;
+use App\Services\Email\CapsuleRevealNotification;
 
 class EmailRevealedCapsules extends Command
 {
@@ -25,6 +28,10 @@ class EmailRevealedCapsules extends Command
      */
     public function handle()
     {
-        //
+        $emailService = new CapsuleRevealNotification;
+        $result = $emailService->revealEmail();
+    
+        $this->info($result);
     }
 }
+

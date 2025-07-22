@@ -3,7 +3,9 @@
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
+
 use App\Models\Capsule;
+use App\Console\Commands\EmailRevealedCapsules;
 
 
 Artisan::command('inspire', function () {
@@ -16,3 +18,7 @@ Schedule::call(function () {
     ->update(['is_revealed' => 1]);
 
 })->daily();
+
+
+
+Schedule::command('app:email-revealed-capsules')->daily();
