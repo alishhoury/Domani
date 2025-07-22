@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.bg-color {
+  background-color: #ffffff;
+}
+
+.primary-color {
+  background-color: #116466;
+}
+
+.button-color {
+  background-color: #B5855A;
+  color: white;
+}
+
+.form-color {
+  background-color: #D1E8E2;
+  color: black;
+}
+
