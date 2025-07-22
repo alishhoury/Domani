@@ -13,6 +13,6 @@ Artisan::command('inspire', function () {
 
 
 
-Schedule::command('app:update-reveal-status')->daily();
+Schedule::command('app:update-reveal-status')->dailyAt('00:00');
 
-Schedule::command('app:email-revealed-capsules')->daily();
+Schedule::command('app:email-revealed-capsules')->daily('01:00');
