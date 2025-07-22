@@ -9,6 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
+
 class CapsuleRevealNotification extends Mailable
 {
     use Queueable, SerializesModels;
@@ -16,10 +17,23 @@ class CapsuleRevealNotification extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public $capsule)
     {
         //
     }
+
+
+    public function build(){
+
+        return $this->subject('Capsule Revealed')->html("<h1>Hello, {$this->capsule->user->name}</h1>
+                    <h2>Your capsule is opened and ready to be viewed</h2>");
+
+
+    }
+
+
+
+
 
     /**
      * Get the message envelope.
