@@ -28,7 +28,7 @@ class CapsuleRevealNotification
         // ->get();
 
         if ($capsules->isEmpty()) {
-            return 'No capsules to reveal today.';
+            return 'No capsules to email';
         }
 
         foreach ($capsules as $capsule) {
