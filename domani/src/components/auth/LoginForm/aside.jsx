@@ -4,7 +4,7 @@ import Button from "../../shared/Button";
 
 
 
-const Aside = () =>{
+const Aside = ({ toggle }) =>{
 return (
     <div>
         <aside>
@@ -14,7 +14,7 @@ return (
                     <h2>Don't have an account!</h2>
                     <p>write a message to the future.</p>
                     
-                    <Button text= {"Sign up"} className={"switch-content-button"}/>
+                    <Button text= {"Sign up"} className={"switch-content-button"} onClickListener={toggle}/>
             
                 </div>
         </aside>

@@ -4,10 +4,10 @@ import Aside from "./aside";
 
 
 
-const LoginPage = ({}) =>{
+const LoginPage = ({ toggle }) =>{
 return (
     <div className="Auth-page">
-        <Aside/>
+        <Aside toggle={toggle}/>
         <div className="centering">
             <LoginForm/>
         </div>

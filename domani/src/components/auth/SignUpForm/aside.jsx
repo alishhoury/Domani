@@ -4,17 +4,17 @@ import Button from "../../shared/Button";
 
 
 
-const Aside = () =>{
+const Aside = ({ toggle }) =>{
 return (
     <div>
         <aside>
             <img src={logo} alt="Domani" />
                 <div className="switch-content">
 
-                    <h2>Welcom Back!</h2>
+                    <h2>Welcome Back!</h2>
                     <p>Every word you’ve saved still matters.</p>
                     
-                    <Button text= {"Login"} className={"switch-content-button"}/>
+                    <Button text= {"Login"} className={"switch-content-button"} onClickListener={toggle}/>
             
                 </div>
         </aside>

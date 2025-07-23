@@ -4,10 +4,14 @@ import Aside from "./aside";
 
 
 
-const SignUpPage = ({}) =>{
+const SignUpPage = ({ toggle, isLogin, setIsLogin }) =>{
 return (
     <div className="Auth-page">
-        <Aside/>
+        <Aside 
+            toggle={toggle}
+            isLogin={isLogin}
+            setIsLogin={setIsLogin}
+        />
         <div className="centering">
             <SignUpForm/>
         </div>
