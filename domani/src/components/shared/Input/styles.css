@@ -1,9 +1,43 @@
-.primary-input{
+.input-container {
+    position: relative;
+    width: 100%;
+}
 
-  width: 100%;
-  padding: 1rem;
-  background-color: #D1E8E2;
-  color: rgba(3, 3, 3, 0.897);
-  border-radius: 6px;    
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 
+    display: flex;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+}
+
+.input-icon img{
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.7;
+}
+
+.primary-input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    background-color: #D1E8E2;
+    color: rgba(3, 3, 3, 0.897);
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.primary-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(10, 79, 80, 0.336);
+}
+
+.primary-input::placeholder {
+    color: rgba(3, 3, 3, 0.6);
 }

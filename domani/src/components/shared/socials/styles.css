@@ -1,19 +1,17 @@
 .social-buttons-container {
+    justify-content: center;
     display: flex;
-    flex-direction: row;
     gap: 12px;
     width: 100%;
-    justify-content: center;
 }
 
 .social-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     padding: 12px;
-    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -22,16 +20,6 @@
     transform: translateY(-1px);
 }
 
-.facebook-button:hover {
-    color:#1877f2;
-}
 
-.google-button:hover {
-    color: #afb3ab;
-}
 
-.social-button svg{
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-}
+

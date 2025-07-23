@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.css";
+import FacebookIcon from "../../../assets/facebook.svg";
+import GoogleIcon from "../../../assets/google.svg";
 
 const SocialButtons = ({onFacebookLogin, onGoogleLogin}) => {
     return (
@@ -8,14 +10,14 @@ const SocialButtons = ({onFacebookLogin, onGoogleLogin}) => {
                 className="social-button facebook-button" 
                 onClick={onFacebookLogin}
                 type="button">
-                <img src="/assets/facebook.svg" alt="Facebook" width="24" height="24" />
+                <img src={FacebookIcon} alt="Facebook" />
             </button>
 
             <button 
                 className="social-button google-button" 
                 onClick={onGoogleLogin}
                 type="button">
-                <img src="/assets/google.svg" alt="Google" width="24" height="24" />
+                <img src={GoogleIcon} alt="Google" />
             </button>
         </div>
     )
