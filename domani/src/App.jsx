@@ -1,9 +1,11 @@
 import "./styles/index.css";
-import Button from "./components/shared/Button/index";
+import SignUpForm from "./components/auth/SignUpForm"
 
 function App() {
   return ( <div className="App">
-    {/* <Button></Button> */}
+
+    <SignUpForm/>
+    
   </div>
   );
 }

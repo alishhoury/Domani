@@ -9,7 +9,6 @@ const SocialButtons = ({onFacebookLogin, onGoogleLogin}) => {
                 onClick={onFacebookLogin}
                 type="button">
                 <img src="/assets/facebook.svg" alt="Facebook" width="24" height="24" />
-                Continue with Facebook
             </button>
 
             <button 
@@ -17,7 +16,6 @@ const SocialButtons = ({onFacebookLogin, onGoogleLogin}) => {
                 onClick={onGoogleLogin}
                 type="button">
                 <img src="/assets/google.svg" alt="Google" width="24" height="24" />
-                Continue with Google
             </button>
         </div>
     )
