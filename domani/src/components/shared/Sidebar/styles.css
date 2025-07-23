@@ -1,0 +1,20 @@
+.bar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 100svh;
+    width: 10rem;
+    margin-left: 1.5rem;
+    gap: 1.5rem;
+
+}
+
+.SideBar{
+    display: flex;
+}
+.line{
+
+    height: 90svh;
+    margin-top: 5svh;
+    margin-left: 2.5rem;
+}
