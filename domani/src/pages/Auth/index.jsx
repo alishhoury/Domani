@@ -1,4 +1,4 @@
-import LoginPage from "../../components/auth/LoginForm";
+import SignUpPage from "../../components/auth/SignUpForm";
 
 
 
@@ -6,7 +6,7 @@ import LoginPage from "../../components/auth/LoginForm";
 const Auth = ({}) =>{
 return (
     <div className="Auth-page">
-        <LoginPage/>
+        <SignUpPage/>
     </div>
 )
 }
