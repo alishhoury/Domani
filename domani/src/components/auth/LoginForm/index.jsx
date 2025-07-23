@@ -8,7 +8,9 @@ const LoginPage = ({}) =>{
 return (
     <div className="Auth-page">
         <Aside/>
-        <LoginForm/>
+        <div className="centering">
+            <LoginForm/>
+        </div>
     </div>
 )
 }

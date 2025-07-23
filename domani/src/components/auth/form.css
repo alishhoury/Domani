@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .form {
@@ -23,6 +24,6 @@
 }
 
 .primary-button{
-    
+    max-height: 2.6rem;
     font-size: 1.1rem;
 }
