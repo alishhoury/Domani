@@ -1,4 +1,4 @@
-import "./styles.css"
+import "../styles.css"
 import Button from "../../shared/Button";
 import Input from "../../shared/Input" ;
 import SocialButtons from "../../shared/socials"
