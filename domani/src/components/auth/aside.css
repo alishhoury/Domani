@@ -1,0 +1,43 @@
+aside{
+
+    background-color: #116466;
+    width: 35svw;
+    height: 100svh;
+
+
+}
+
+aside img{
+
+    margin: 1.5rem;
+    margin-left: 1.7rem;
+    width: 9rem;
+
+}
+
+
+
+.switch-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    color: aliceblue;
+}
+
+
+p{
+    font-size: 0.85em;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.switch-content-button{
+    max-width: 8rem;
+    max-height: 2.2rem;
+    font-size: 0.95rem;
+
+}

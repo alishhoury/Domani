@@ -1,29 +1,13 @@
-.signup-form-container {
+.Auth-page{
+
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.signup-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 25rem;
-    min-width: 17.5rem;
-    gap: 1rem;
     padding: 2rem;
-    box-sizing: border-box;
 }
-
-.auth-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #333;
-}
-
-.primary-button{
-
-    font-size: 1.1rem;
-}
-
