@@ -1,8 +1,10 @@
-
+import "./styles/index.css";
+import Button from "./components/shared/Button/index";
 
 function App() {
-  return ( <div className="App"></div>
-
+  return ( <div className="App">
+    {/* <Button></Button> */}
+  </div>
   );
 }
 
