@@ -6,7 +6,7 @@ import Home from "../../../assets/home.svg";
 import Create from "../../../assets/create.svg";
 import Private1 from "../../../assets/private.svg";
 import Profile from "../../../assets/profile.svg";
-import line from "../../../assets/Line.svg";
+import line from "../../../assets/Line.svg"; 
 import Logout from "../../../assets/logout.svg";
 
 const SideBar = ({}) => {
