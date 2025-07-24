@@ -1,4 +1,5 @@
 import "../form.css"
+import { useEffect, useState } from "react";
 import Button from "../../shared/Button";
 import Input from "../../shared/Input" ;
 import SocialButtons from "../../shared/socials"
@@ -39,7 +40,15 @@ return (
             <Button 
             text={"Login"}
             onClickListener={async () => {
-                console.log(email, password);}}
+                console.log(email, password);
+                const res = await axios.post("http://127.0.0.1:8000/api/login", {
+                email: email,
+                password: password
+                });
+                if (true){
+                    navigate("/home");
+                }
+            }}
              />
 
 

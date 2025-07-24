@@ -18,13 +18,13 @@ Route::post("/create", [CreateCapsuleController::class, "create"]);
 
 Route::get("/UserCapsules", [RetrieveCapsuleController::class, "getUserCapsules"]);
 Route::get("/PrivateCapsules", [RetrieveCapsuleController::class, "getPrivateCapsules"]);
-Route::get("/PublicCapsules", [RetrieveCapsuleController::class, "getPublicCapsules"]);
 Route::get("/FilterByCountry", [RetrieveCapsuleController::class, "getPublicByCountry"]);
 Route::get("/FilterByMood", [RetrieveCapsuleController::class, "getPublicByMood"]);
 
 Route::post("/UpdatePhoto", [ProfileController::class, "updatePhoto"]);
 
 });
+Route::get("/PublicCapsules", [RetrieveCapsuleController::class, "getPublicCapsules"]);
 
 
 Route::group(["prefix" => "guest"], function(){
