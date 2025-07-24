@@ -4,18 +4,46 @@ import Input from "../../shared/Input" ;
 import SocialButtons from "../../shared/socials"
 import EmailIcon from "../../../assets/email.svg"
 import PasswordIcon from "../../../assets/password.svg"
+import axios from 'axios';
+import { setToken } from "../../../auth"
+import { useNavigate } from "react-router-dom";
+
 
 const LoginForm = ({}) =>{
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const navigate = useNavigate();
+
 return (
     <div className="form-container">
         <div className="form">
             <h1 className="auth-title">Welcome, Back!</h1>
             <SocialButtons/>
 
-            <Input name={"email"} hint={"Email"} icon={<img src={EmailIcon} alt="email" />} />
-            <Input name={"password"} hint={"Password"} icon={<img src={PasswordIcon} alt="password" />} />
+            <Input name={"email"} 
+                   hint={"Email"}
+                   onChangeListener={(e) => {
+                    setEmail(e.target.value)
+                   }}
+                   icon={<img src={EmailIcon} alt="email" />} />
 
-            <Button text={"Login"} />
+
+            <Input name={"password"}
+                   hint={"Password"}
+                   onChangeListener={(e) => {
+                    setPassword(e.target.value)
+                   }}
+                   icon={<img src={PasswordIcon} alt="password"  />} />
+
+            <Button 
+            text={"Login"}
+            onClickListener={async () => {
+                console.log(email, password);}}
+             />
+
+
+
         </div>
     </div>
 )
