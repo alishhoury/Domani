@@ -41,7 +41,7 @@ return (
             text={"Login"}
             onClickListener={async () => {
                 console.log(email, password);
-                const res = await axios.post("http://127.0.0.1:8000/api/login", {
+                const res = await axios.post("http://127.0.0.1:8000/api/guest/login", {
                 email: email,
                 password: password
                 });

@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Capsule\CreateCapsuleController;
 
