@@ -29,6 +29,7 @@ const SideBar = ({}) => {
   };
 
       const logout = () => {
+        localStorage.removeItem('token');
          navigate('/');
   };
 

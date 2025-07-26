@@ -6,7 +6,6 @@ import SocialButtons from "../../shared/socials"
 import EmailIcon from "../../../assets/email.svg"
 import PasswordIcon from "../../../assets/password.svg"
 import axios from 'axios';
-import { setToken } from "../../../auth"
 import { useNavigate } from "react-router-dom";
 
 
@@ -45,9 +44,11 @@ return (
                 email: email,
                 password: password
                 });
-                if (true){
-                    navigate("/home");
-                }
+
+                const token = res.data.payload.token
+                localStorage.setItem("token", token);
+                navigate("/Home");
+
             }}
              />
 

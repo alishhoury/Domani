@@ -19,7 +19,7 @@ const SignUpForm = ({}) =>{
 
 return (
     <div className="form-container">
-        <form className="form">
+        <div className="form">
             <h1 className="auth-title">First time here!!</h1>
             <SocialButtons/>
 
@@ -54,17 +54,17 @@ return (
             <Button text={"Sign up"} 
                 onClickListener={async () =>{
                     console.log(name, email, password)
-                    const response = await axios.post("http://127.0.0.1:8000/api/guest/register", {
+                    const res = await axios.post("http://127.0.0.1:8000/api/guest/register", {
                         name: name,
                         email: email,
                         password: password
                     })
-                    
-                        const token = response.data.authorisation.token;
-                        localStorage.setItem("token", token);
-                        navigate("/Home");
+                    const token = res.data.payload.token;
+                    localStorage.setItem("token", token);
+                    navigate("/Home");
+
                 }}/>
-        </form>
+        </div>
     </div>
 )
 }
