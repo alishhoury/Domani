@@ -23,11 +23,11 @@ return (
             <SocialButtons/>
 
             <Input name={"email"} 
-                   hint={"Email"}
                    onChangeListener={(e) => {
-                    setEmail(e.target.value)
-                   }}
-                   icon={<img src={EmailIcon} alt="email" />} />
+                       setEmail(e.target.value)
+                    }}
+                    hint={"Email"}
+                    icon={<img src={EmailIcon} alt="email" />} />
 
 
             <Input name={"password"}

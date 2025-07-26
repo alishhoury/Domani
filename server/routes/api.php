@@ -10,6 +10,8 @@ use App\Http\Controllers\Capsule\CreateCapsuleController;
 use App\Http\Controllers\Capsule\RetrieveCapsuleController;
 
 
+
+
 Route::group(["middleware" => "auth:api"], function(){
 
 Route::post("/logout", [AuthController::class, "logout"]);
