@@ -18,3 +18,18 @@
     margin-top: 5svh;
     margin-left: 2.5rem;
 }
+
+.sidebar-icon {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-icon.active {
+  background-color:#898d8c33;
+  border-radius: 20px;
+}

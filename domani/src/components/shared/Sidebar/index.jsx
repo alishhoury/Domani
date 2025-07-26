@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import "./styles.css";
 import title from "../../../assets/title.svg";
 import Home from "../../../assets/home.svg";
@@ -11,6 +11,9 @@ import Logout from "../../../assets/logout.svg";
 
 const SideBar = ({}) => {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const isActive = (path) => location.pathname === path;
 
       const home = () => {
         navigate('/home');
@@ -39,11 +42,11 @@ const SideBar = ({}) => {
             <div class="bar-content">
                 <img src={title} alt="Domani" />
 
-                <img src={Home} alt="home" onClick={home}/>
-                <img src={Create} alt="create" onClick={create}/>
-                <img src={Private1} alt="private" onClick={private1}/>
-                <img src={Profile} alt="profile" onClick={profile}/>
-                <img src={Logout} alt="logout" onClick={logout}/>
+                <img src={Home} alt="home" onClick={home} className={isActive('/home') ? 'sidebar-icon active' : 'sidebar-icon'}/>
+                <img src={Create} alt="create" onClick={create}  className={isActive('/create') ? 'sidebar-icon active' : 'sidebar-icon'}/>
+                <img src={Private1} alt="private" onClick={private1}  className={isActive('/private') ? 'sidebar-icon active' : 'sidebar-icon'}/>
+                <img src={Profile} alt="profile" onClick={profile}  className={isActive('/profile') ? 'sidebar-icon active' : 'sidebar-icon'}/>
+                <img src={Logout} alt="logout" onClick={logout} class="sidebar-icon hover"/>
 
 
             </div>
