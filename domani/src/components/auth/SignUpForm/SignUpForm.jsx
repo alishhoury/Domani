@@ -14,6 +14,7 @@ const SignUpForm = ({}) =>{
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [errorMessage, setErrorMessage] = useState();
 
     const navigate = useNavigate();
 
@@ -53,8 +54,9 @@ return (
 
             <Button text={"Sign up"} 
                 onClickListener={async () =>{
-                    
+
                 try{
+                    setErrorMessage("")
                     console.log(name, email, password)
                     const res = await axios.post("http://127.0.0.1:8000/api/guest/register", {
                         name: name,
@@ -67,9 +69,12 @@ return (
                     navigate("/home");
                 }catch (error){
                     console.error("Registration failed:", error)
+                    setErrorMessage("check inputs and try again")
                 }
-        }}
-                />
+        }}/>
+
+            <p class = "error-message">{errorMessage}</p>
+
         </div>
     </div>
 )
