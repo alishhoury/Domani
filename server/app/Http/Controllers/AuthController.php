@@ -30,31 +30,4 @@ class AuthController extends Controller
 
     }
 
-##########################################
-
-
-    public function logout()
-    {
-        Auth::guard('api')->logout();
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Successfully logged out',
-        ]);
-    }
-
-
-#########################################
-
-    public function refresh()
-    {
-        return response()->json([
-            'status' => 'success',
-            'user' => Auth::guard('api')->user(),
-            'authorisation' => [
-                'token' => Auth::guard('api')->refresh(),
-                'type' => 'bearer',
-            ]
-        ]);
-    }
-
 }
