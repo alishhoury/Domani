@@ -53,17 +53,23 @@ return (
 
             <Button text={"Sign up"} 
                 onClickListener={async () =>{
+                    
+                try{
                     console.log(name, email, password)
                     const res = await axios.post("http://127.0.0.1:8000/api/guest/register", {
                         name: name,
                         email: email,
                         password: password
                     })
+                
                     const token = res.data.payload.token;
                     localStorage.setItem("token", token);
-                    navigate("/Home");
-
-                }}/>
+                    navigate("/home");
+                }catch (error){
+                    console.error("Registration failed:", error)
+                }
+        }}
+                />
         </div>
     </div>
 )

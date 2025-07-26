@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 const LoginForm = ({}) =>{
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
@@ -39,18 +40,27 @@ return (
             <Button 
             text={"Login"}
             onClickListener={async () => {
-                console.log(email, password);
-                const res = await axios.post("http://127.0.0.1:8000/api/guest/login", {
-                email: email,
-                password: password
-                });
+                try{
+                    setErrorMessage("")
+                    console.log(email, password);
+                    const res = await axios.post("http://127.0.0.1:8000/api/guest/login", {
+                    email: email,
+                    password: password
+                    });
+    
+                    const token = res.data.payload.token
+                    localStorage.setItem("token", token);
+                    navigate("/home");
+                }catch (error){
+                    console.error("Registration failed:", error)
+                    setErrorMessage("Login failed. Please check your email or password.");
 
-                const token = res.data.payload.token
-                localStorage.setItem("token", token);
-                navigate("/Home");
-
-            }}
-             />
+                }
+            }} />
+            
+            {errorMessage && (
+                    <p class ="error-message">{errorMessage}</p>
+                )}
 
 
 
