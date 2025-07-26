@@ -19,29 +19,42 @@ const SignUpForm = ({}) =>{
 
 return (
     <div className="form-container">
-        <div className="form">
+        <form className="form">
             <h1 className="auth-title">First time here!!</h1>
             <SocialButtons/>
 
-            <Input name={"name"} hint={"name"} icon={<img src={NameIcon} alt="password" />} 
+            <Input name={"name"} 
+                   hint={"name"} 
+                   icon={<img src={NameIcon} alt="password" />} 
+                   required={true}
                 onChangeListener={(e) => {
                     setName(e.target.value)
                 }}/>
 
-            <Input name={"email"} hint={"Email"} icon={<img src={EmailIcon} alt="email" />} 
+
+            <Input name={"email"}
+                   hint={"Email"} 
+                   icon={<img src={EmailIcon} alt="email" />} 
+                   type={"email"}
+                   required={true}
                 onChangeListener={(e) =>{
                     setEmail(e.target.value)
                 }}
             />
-            <Input name={"password"} hint={"Password"} icon={<img src={PasswordIcon} alt="password" />} 
+            <Input name={"password"}
+                    hint={"Password"} 
+                    icon={<img src={PasswordIcon} alt="password" />} 
+                    type={"password"}
+                    required={true}
                 onChangeListener={(e) =>{
                     setPassword(e.target.value)
                 }}/>
 
+
             <Button text={"Sign up"} 
                 onClickListener={async () =>{
                     console.log(name, email, password)
-                    const response = await axios.post("http://127.0.0.1:8000/api/guestregister", {
+                    const response = await axios.post("http://127.0.0.1:8000/api/guest/register", {
                         name: name,
                         email: email,
                         password: password
@@ -51,7 +64,7 @@ return (
                         localStorage.setItem("token", token);
                         navigate("/Home");
                 }}/>
-        </div>
+        </form>
     </div>
 )
 }

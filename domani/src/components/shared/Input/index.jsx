@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const Input = ({ name,type, hint, required,icon, onChangeListener, className }) => {
+const Input = ({ name,type, hint, required,icon, onChangeListener, minLength,className }) => {
 
     return (
         <div className="input-container">
@@ -11,6 +11,7 @@ const Input = ({ name,type, hint, required,icon, onChangeListener, className }) 
         name={name}
         placeholder={hint}
         required={required}
+        minLength={minLength}
         onChange={onChangeListener}
         className={`primary-input ${className || ''}`}
         />
