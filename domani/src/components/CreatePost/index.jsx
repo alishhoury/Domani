@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles.css";
 import Audio from "../../assets/AddPicture.svg"
 import Picture from "../../assets/AddAudio.svg"
+import axios from 'axios';
 
 
 const PostCreationForm = () =>{
@@ -39,6 +40,14 @@ const PostCreationForm = () =>{
         media_type: mediaType,
         reveal_at: lockUntil
     };
+        const token = localStorage.getItem("token")
+        const response = await axios.post("http://192.168.0.103:8000/api/posts", postData,{
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        }
+    });
+        console.log('Post created successfully:');
+        resetForm();
    }
     const resetForm = () => {
         setMood(null);
@@ -49,6 +58,7 @@ const PostCreationForm = () =>{
         setMediaType(null);
         setLockUntil('');
   };
+
 
 
 
