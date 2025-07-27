@@ -106,7 +106,7 @@ return(
                 </div>
                 <div className="buttons">
                     <button onClick={handleSubmit}>create</button>
-                    <button>cancel</button>
+                    <button onClick={resetForm}>cancel</button>
                 </div>
 
 
