@@ -5,7 +5,7 @@ import SocialButtons from "../../shared/socials"
 import NameIcon from "../../../assets/name.svg"
 import EmailIcon from "../../../assets/email.svg"
 import PasswordIcon from "../../../assets/password.svg"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
@@ -58,7 +58,7 @@ return (
                 try{
                     setErrorMessage("")
                     console.log(name, email, password)
-                    const res = await axios.post("http://127.0.0.1:8000/api/guest/register", {
+                    const res = await axios.post("http://192.168.0.103:8000/api/guest/register", {
                         name: name,
                         email: email,
                         password: password
