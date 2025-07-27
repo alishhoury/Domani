@@ -62,6 +62,7 @@ return(
                         <input
                             type="checkbox"
                             checked={isPrivate}
+                            onChange={(e) => setIsPrivate(e.target.checked)}
                             />
                     </label>
                     <label>
@@ -69,6 +70,7 @@ return(
                         <input
                             type="checkbox"
                             checked={isSurprise}
+                            onChange={(e) => setIsPrivate(e.target.checked)}
                             />
                     </label>
                 </div>
