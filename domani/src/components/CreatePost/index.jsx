@@ -28,7 +28,19 @@ const PostCreationForm = () =>{
         setMedia(base64)
         setMediaType(type)
    }
+   const handleSubmit = async () => {
 
+    const postData = {
+        mood:mood,
+        private_mode: isPrivate ? 1:0,
+        surprize_mode: isSurprise ? 1:0,
+        message: message,
+        media: media,
+        media_type: mediaType,
+        reveal_at: lockUntil
+    };
+
+   }
 
 
 
