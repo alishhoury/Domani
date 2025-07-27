@@ -2,19 +2,29 @@ import { useState } from "react";
 import "./styles.css";
 import Audio from "../../assets/AddPicture.svg"
 import Picture from "../../assets/AddAudio.svg"
-import EmailIcon from "../../assets/email.svg"
 
 
 const PostCreationForm = () =>{
-//   const [mood, setMood] = useState(null);
-  const [isPrivate, setIsPrivate] = useState();
-  const [isSurprise, setIsSurprise] = useState();
-//   const [message, setMessage] = useState('');
-//   const [media, setMedia] = useState(null);
-//   const [mediaType, setMediaType] = useState(null); 
-//   const [lockUntil, setLockUntil] = useState('');
+  const [mood, setMood] = useState(null);
+  const [isPrivate, setIsPrivate] = useState(false);
+  const [isSurprise, setIsSurprise] = useState(false);
+  const [message, setMessage] = useState('');
+  const [media, setMedia] = useState(null);
+  const [mediaType, setMediaType] = useState(null); 
+  const [lockUntil, setLockUntil] = useState('');
 
 
+  const convertToBase64 = (file) => {
+    return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+    })
+  }
+
+
+
+  
 return(
     <div className="create-post-form">
         <div className="create-post-container">
