@@ -70,7 +70,7 @@ return(
                         <input
                             type="checkbox"
                             checked={isSurprise}
-                            onChange={(e) => setIsPrivate(e.target.checked)}
+                            onChange={(e) => setIsSurprise(e.target.checked)}
                             />
                     </label>
                 </div>
@@ -78,18 +78,26 @@ return(
                     <input
                         type="text"
                         placeholder="Send a message across the timeline..."
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         />
                 </div>
                 <div className="media">
-                     <img src={Picture} alt="AddPicture" />
-                     <img src={Audio} alt="AddPicture" />
+                    <label>
+                        <img src={Picture} alt="AddPicture" />
+                        <input type="file" accept="audio/*" onChange={(e) => handleMedia(e, 'audio')} />                    
+                    </label>
+                    <label>
+                        <img src={Audio} alt="AddPicture" />
+                        <input type="file" accept="image/*" onChange={(e) => handleMedia(e, 'image')} />
+                    </label>
                 </div>
                 <div className="reveal-date">
                     <label for="Lock until:">Lock until:</label>
-                    <input type="date" />
+                    <input type="date" value={lockUntil} onChange={(e) => setLockUntil(e.target.value)} />
                 </div>
                 <div className="buttons">
-                    <button>create</button>
+                    <button onClick={handleSubmit}>create</button>
                     <button>cancel</button>
                 </div>
 
