@@ -22,9 +22,16 @@ const PostCreationForm = () =>{
     })
   }
 
+   const handleMedia = async (event, type) => {
+        const file = event.target.files[0];
+        const base64 = await convertToBase64(file);
+        setMedia(base64)
+        setMediaType(type)
+   }
 
 
-  
+
+
 return(
     <div className="create-post-form">
         <div className="create-post-container">
