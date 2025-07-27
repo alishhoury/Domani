@@ -50,10 +50,10 @@ return(
 
                 <div className="mood">
                     <p className="text">Mood:</p>
-                    <p className="happy">😊</p>
-                    <p className="sad">😔</p>
-                    <p className="nervous">😫</p>
-                    <p className="excited">🤩</p>
+                    <p className="happy" onClick={() => setMood('happy')}>😊</p>
+                    <p className="sad" onClick={() => setMood('sad')}>😔</p>
+                    <p className="nervous" onClick={() => setMood('nervous')}>😫</p>
+                    <p className="excited" onClick={() => setMood('excited')}>🤩</p>
                 </div>
 
                 <div className="tags">
