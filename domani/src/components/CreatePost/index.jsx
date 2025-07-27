@@ -39,8 +39,16 @@ const PostCreationForm = () =>{
         media_type: mediaType,
         reveal_at: lockUntil
     };
-
    }
+    const resetForm = () => {
+        setMood(null);
+        setIsPrivate(false);
+        setIsSurprise(false);
+        setMessage('');
+        setMedia(null);
+        setMediaType(null);
+        setLockUntil('');
+  };
 
 
 
