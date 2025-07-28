@@ -41,7 +41,7 @@ const PostCreationForm = () =>{
         reveal_at: lockUntil
     };
         const token = localStorage.getItem("token")
-        const response = await axios.post("http://192.168.0.103:8000/api/posts", postData,{
+        const response = await axios.post("http://192.168.0.103:8000/api/create", postData,{
         headers: {
             'Authorization': `Bearer ${token}`,
         }
@@ -115,8 +115,8 @@ return(
                     <input type="date" value={lockUntil} onChange={(e) => setLockUntil(e.target.value)} />
                 </div>
                 <div className="buttons">
-                    <button onClick={handleSubmit}>create</button>
-                    <button onClick={resetForm}>cancel</button>
+                    <button className="button-create" onClick={handleSubmit}>create</button>
+                    <button className="button-create" onClick={resetForm}>cancel</button>
                 </div>
 
 

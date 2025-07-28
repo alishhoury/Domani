@@ -15,6 +15,27 @@ class Capsule extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+
+     protected $fillable = [
+        'user_id',
+        'private_mode',
+        'surprize_mode',
+        'ip_address',
+        'countryName',
+        'mood',
+        'message',
+        'media_type',
+        'media_path',
+        'reveal_at',
+        'is_revealed'
+    ];
+
+    protected $casts = [
+        'private_mode' => 'boolean',
+        'surprize_mode' => 'boolean',
+        'is_revealed' => 'boolean',
+        'reveal_at' => 'date'
+    ];
 }
 
 

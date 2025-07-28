@@ -27,7 +27,7 @@ return new class extends Migration
             $table->enum('mood', ['happy', 'sad', 'nervous', 'excited']);
             $table->text('message');
             $table->enum('media_type', ['image','video', 'audio'])->nullable;
-            $table->string('media_path')->nullable;
+            $table->string('media_path')->nullable();
             //reveal
             $table->date('reveal_at');
             $table->boolean('is_revealed')->default(false);
