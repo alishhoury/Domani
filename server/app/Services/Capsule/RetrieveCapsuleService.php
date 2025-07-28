@@ -16,4 +16,10 @@ class RetrieveCapsuleService
  
     }
 
+    static function getUserCapsules($userId){
+
+        return Capsule::where('user_id', $userId)->orderBy('created_at', 'desc')->get();
+
+    }
+
 }
