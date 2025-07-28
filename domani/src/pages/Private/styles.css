@@ -1,0 +1,26 @@
+.Private-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.SideBar {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .SideBar {
+    display: none;
+  }
+  .Private-page {
+    flex-direction: column;
+  }
+}
