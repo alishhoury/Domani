@@ -23,10 +23,9 @@ class CreateCapsuleService
         ]);
 
         if ($validator->fails()) {
-            return response()->json([
-                'success' => false,
-                'errors' => $validator->errors()
-            ], 422);
+            return $this->responseJson("validator error", 401);
+         
+
         }
 
         $mediaPath = null;
