@@ -25,8 +25,8 @@ Route::get("/FilterByMood", [RetrieveCapsuleController::class, "getPublicByMood"
 
 Route::post("/UpdatePhoto", [ProfileController::class, "updatePhoto"]);
 
-Route::get("/PublicCapsules", [RetrieveCapsuleController::class, "getPublicCapsules"]);
 });
+Route::get("/PublicCapsules", [RetrieveCapsuleController::class, "getPublicCapsules"]);
 
 
 Route::group(["prefix" => "guest"], function(){

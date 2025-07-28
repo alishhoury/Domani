@@ -41,7 +41,7 @@ const PostCreationForm = () =>{
         reveal_at: lockUntil
     };
         const token = localStorage.getItem("token")
-        const response = await axios.post("http://192.168.0.103:8000/api/create", postData,{
+        const response = await axios.post("http://127.0.0.1:8000/api/create", postData,{
         headers: {
             'Authorization': `Bearer ${token}`,
         }

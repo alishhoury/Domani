@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 
 
 class Capsule extends Model
@@ -36,6 +38,17 @@ class Capsule extends Model
         'is_revealed' => 'boolean',
         'reveal_at' => 'date'
     ];
+    // Append full media URL
+    protected $appends = ['media_url'];
+
+    public function getMediaUrlAttribute()
+    {
+        if (! $this->media_path) {
+            return null;
+        }
+        // Storage::url returns '/storage/...'
+        return URL::to(Storage::url($this->media_path));
+    }
 }
 
 

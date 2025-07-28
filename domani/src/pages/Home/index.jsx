@@ -10,7 +10,7 @@ const Home = ({}) =>{
     useEffect(() => {
         const fetchCapsules = async () => {
             try {
-                const res = await axios.get('http://127.1.1:8000/api/PublicCapsules', {
+                const res = await axios.get('http://127.0.0.1:8000/api/PublicCapsules', {
                     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
                 });
                 setCapsules(res.data.payload);

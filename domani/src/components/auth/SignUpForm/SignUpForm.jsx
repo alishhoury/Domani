@@ -58,7 +58,7 @@ return (
                 try{
                     setErrorMessage("")
                     console.log(name, email, password)
-                    const res = await axios.post("http://127.1.1:8000/api/guest/register", {
+                    const res = await axios.post("http://127.0.0.1:8000/api/guest/register", {
                         name: name,
                         email: email,
                         password: password
