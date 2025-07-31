@@ -1,0 +1,36 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 25rem;
+    min-width: 17.5rem;
+    gap: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.auth-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.primary-button{
+    max-height: 2.6rem;
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: rgb(224, 7, 7);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}

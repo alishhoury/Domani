@@ -1,0 +1,65 @@
+.asside{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+
+.Title{
+    width: 10rem;
+}
+
+.asside h1{
+    font-family: Inknut Antiqua, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    line-height: 3.7rem;
+}
+.asside p{
+    font-size: 2rem;
+    margin-top: 3rem;
+    line-height: 3rem;
+
+}
+
+.asside button{
+    width: 11rem;
+    height: 3rem;
+    background-color: #B5855A;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 4rem;
+}
+
+.asside button:hover{
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+hero{
+    display: flex;
+  
+}
+
+.capsule{
+    height: 20rem;
+    margin-top: 45svh;
+    margin-left: 60%;
+    transform: translateY(-50%);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem ;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+
+h4{
+    color: #000000a8;
+}

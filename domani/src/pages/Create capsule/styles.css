@@ -1,0 +1,24 @@
+.create-page{
+
+    display: flex;
+    
+}
+
+
+.post-form{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+@media (max-width: 768px) {
+  .SideBar {
+    display: none;
+  }
+  .create-page {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,35 @@
+.bar-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 100svh;
+    width: 10rem;
+    margin-left: 1.5rem;
+    gap: 1.5rem;
+
+}
+
+.SideBar{
+    display: flex;
+}
+.line{
+
+    height: 90svh;
+    margin-top: 5svh;
+    margin-left: 2.5rem;
+}
+
+.sidebar-icon {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-icon.active {
+  background-color:#898d8c33;
+  border-radius: 20px;
+}

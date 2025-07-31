@@ -1,0 +1,20 @@
+
+.primary-button {
+  width: 100%;
+  background-color: #b5845ab2;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.primary-button:hover {
+  background-color: #B5855A;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}

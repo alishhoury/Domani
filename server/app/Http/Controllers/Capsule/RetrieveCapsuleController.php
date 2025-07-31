@@ -10,7 +10,8 @@ use App\Services\Capsule\RetrieveCapsuleService;
 class RetrieveCapsuleController extends Controller
 {
     function getUserCapsules(){
-        
+        $Capsules = RetrieveCapsuleService::getUserCapsules(auth()->user()->id);
+        return $this->responseJSON($Capsules);
     }
     
     function getPrivateCapsules(){

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: transparent;
+}
+
+body{
+  background-color: #fdfdfd;
+}
+.primary-color {
+  background-color: #116466;
+}
+
+
+.form-color {
+  background-color: #D1E8E2;
+  color: rgb(3, 3, 3);
+}
+

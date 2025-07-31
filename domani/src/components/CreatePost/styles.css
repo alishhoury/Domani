@@ -1,0 +1,117 @@
+.create-post-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+}
+
+.mood{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+    background-color: #d1e8e285;
+    padding: 0.5rem ;
+    border-radius: 5px;
+    width: 25rem;
+    max-width: 90vw;
+}
+.mood p:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+
+.tags{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.5rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+    background-color: #d1e8e285;
+    padding: 0.5rem ;
+    border-radius: 5px;
+    width: 25rem;
+    max-width: 90vw;
+}
+label{
+
+    display: flex;
+    gap: 0.5rem;
+}
+
+.message input{
+    display: flex;
+    justify-content: start;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    background-color: #d1e8e285;
+    max-width: 90vw;
+
+}
+
+.message input::placeholder{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #00000079;
+}
+
+.media{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #d1e8e285;
+    border-radius: 5px;
+}
+.media img{
+    width: 6rem;
+    cursor: pointer;
+}
+.media input{
+    display: none;
+}
+.reveal-date{
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    background-color: #d1e8e285;
+    padding: 0.5rem ;
+    border-radius: 5px;
+    width: 25rem;
+    max-width: 90vw;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 25rem;
+    max-width: 90vw;
+}
+.button-create{
+    background-color: #b5845ab2;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 12.2rem;
+    max-width: 40vw;
+}
+
+button:hover{
+    background-color: #B5855A;
+}
